@@ -1,0 +1,105 @@
+.container {
+    padding: 20px;
+}
+
+.upload-div {
+    width: 350px;
+    margin: auto;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 12px;
+    box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+}
+
+.upload-div h4 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #666;
+    margin-top: 0;
+}
+
+.upload-div input[type="file"] {
+    display: block;
+    max-width: 100%;
+    height: 25px;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.upload-div input[type="file"]:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.upload-div input[type="submit"] {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.upload-div input[type="submit"]:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 20px;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #28a745;
+    transition: width .6s ease;
+    font-size: 16px;
+    text-align: center;
+}
+
+#uploadStatus {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
