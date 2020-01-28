@@ -8,7 +8,7 @@
     background-color: #f3f3f3;
     color: #333;
     padding: 12px;
-    box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
     font-size: 16px;
 }
 
@@ -32,8 +32,8 @@
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .upload-div input[type="file"]:focus {
@@ -41,7 +41,7 @@
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+    box-shadow: 0rem 0rem 0rem 0.2rem rgba(0, 123, 255, .25);
 }
 
 .upload-div input[type="submit"] {
@@ -52,10 +52,10 @@
     vertical-align: middle;
     background-color: transparent;
     border: 1px solid transparent;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
@@ -74,9 +74,9 @@
     display: flex;
     height: 20px;
     overflow: hidden;
-    font-size: .75rem;
+    font-size: 0.75rem;
     background-color: #e9ecef;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     margin-top: 10px;
 }
 
@@ -92,7 +92,7 @@
     text-align: center;
     white-space: nowrap;
     background-color: #28a745;
-    transition: width .6s ease;
+    transition: width 1.2s ease;
     font-size: 16px;
     text-align: center;
 }
