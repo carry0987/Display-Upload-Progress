@@ -37,7 +37,7 @@ $(document).ready(function() {
                     setTimeout(
                         function() {
                             $('.circle-wrap .circle .mask .fill').css('background-color','#0f9d58');
-                        }, 1500);
+                        }, 150);
                 } else if (resp == 'err') {
                     $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
                     AnimateRotate(0);
@@ -65,7 +65,7 @@ $(document).ready(function() {
         degrees += degree;
         var elem = $('.circle-wrap .circle .mask.full, .circle-wrap .circle .fill');
         $(elem).animate({deg: degrees}, {
-            duration: 1500,
+            duration: 0,
             step: function(now) {
                 elem.css({
                     'transform': 'rotate('+ now +'deg)'
