@@ -5,6 +5,7 @@
     <title>File Upload with Progress</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/progress.css">
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/upload-progress.js" type="text/javascript"></script>
 </head>
@@ -19,9 +20,17 @@
                 <input type="file" name="file" id="fileInput" />
                 <input type="submit" name="submit" value="UPLOAD" />
             </form>
-            <!--Progress bar-->
-            <div class="progress">
-                <div class="progress-bar"></div>
+            <!--Progress Circle-->
+            <div class="circle-wrap">
+                <div class="circle">
+                    <div class="mask full">
+                        <div class="fill"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill"></div>
+                    </div>
+                    <div class="inside-circle"></div>
+                </div>
             </div>
             <!--Display upload status-->
             <div id="uploadStatus"></div>

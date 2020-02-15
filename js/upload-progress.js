@@ -8,8 +8,10 @@ $(document).ready(function() {
                 xhr.upload.addEventListener('progress', function(evt) {
                     if (evt.lengthComputable) {
                         var percentComplete = Math.round((evt.loaded / evt.total) * 100);
-                        $('.progress-bar').width(percentComplete + '%');
-                        $('.progress-bar').html(percentComplete + '%');
+                        //$('.progress-bar').width(percentComplete + '%');
+                        //$('.progress-bar').html(percentComplete + '%');
+                        AnimateRotate(percentComplete * 1.8);
+                        $('.inside-circle').html(percentComplete + '%');
                     }
                 }, false);
                 return xhr;
@@ -21,8 +23,9 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             beforeSend: function() {
-                $('.progress-bar').width('0%');
-                $('#uploadStatus').html('<img src="images/loading-spin.svg" />');
+                $('.inside-circle').html('0%');
+                //$('.progress-bar').width('0%');
+                //$('#uploadStatus').html('<img src="images/loading-spin.svg" />');
             },
             error: function() {
                 $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
@@ -31,8 +34,14 @@ $(document).ready(function() {
                 if (resp == 'ok') {
                     $('#uploadForm')[0].reset();
                     $('#uploadStatus').html('<p style="color:#28A74B;">File has uploaded successfully!</p>');
+                    setTimeout(
+                        function() {
+                            $('.circle-wrap .circle .mask .fill').css('background-color','#0f9d58');
+                        }, 1500);
                 } else if (resp == 'err') {
                     $('#uploadStatus').html('<p style="color:#EA4335;">Please select a valid file to upload.</p>');
+                    AnimateRotate(0);
+                    $('.inside-circle').html('<span>0%</span>');
                 }
             }
         });
@@ -49,4 +58,19 @@ $(document).ready(function() {
             return false;
         }
     });
+
+    //Progress Circle
+    function AnimateRotate(degree) {
+        var degrees = 0;
+        degrees += degree;
+        var elem = $('.circle-wrap .circle .mask.full, .circle-wrap .circle .fill');
+        $(elem).animate({deg: degrees}, {
+            duration: 1500,
+            step: function(now) {
+                elem.css({
+                    'transform': 'rotate('+ now +'deg)'
+                });
+            }
+        });
+    }
 });
