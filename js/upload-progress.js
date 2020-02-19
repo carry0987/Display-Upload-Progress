@@ -57,6 +57,8 @@ $(document).ready(function() {
             $('#fileInput').val('');
             return false;
         }
+        $('.inside-circle').html('0%');
+        $('.circle-wrap .circle .mask .fill').css('background-color','#e2e2e2');
     });
 
     //Progress Circle
@@ -72,5 +74,6 @@ $(document).ready(function() {
                 });
             }
         });
+        $('.circle-wrap .circle .mask .fill').css('background-color','#4285f4');
     }
 });
